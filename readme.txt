@@ -6,6 +6,8 @@ Tested up to: 4.2.2
 Stable tag: trunk
 License: GPLv3
 
+This plugin creates a widget area on the bottom right corner of your site, with a 'toaster' like effect.
+
 == Description ==
 
 This plugin creates a widget area on the bottom right corner of your site, with a 'toaster' like effect.
@@ -16,6 +18,7 @@ Features
 * Adjust size (width/height)
 
 Coming soon features
+
 * Choose animation
 * Choose colors
 * Specify individual URLs
@@ -38,6 +41,9 @@ This section describes how to install the plugin and get it working.
 4. To place any widget you want go to 'appearance > widgets'. There will be a area called 'Toaster Widget' where you can just drag and drop your widgets.
 
 == Changelog ==
+
+= 1.0.1 =
+* Improved the admin area.
 
 = 1.0.0 =
 * Initial version.

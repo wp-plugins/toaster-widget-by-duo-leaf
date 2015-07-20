@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Toaster Widget by Duo Leaf
  * Plugin URI: http://DuoLeaf.com/toaster-widget-wordpress-plugin/
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Duo Leaf
  * Author URI: http://DuoLeaf.com/
  * Description: 
@@ -26,6 +26,9 @@ class dl_tw_ToasterWidget {
 
         add_action('admin_menu', array(&$this, 'adminPanelsAndMetaBoxes'));
         add_action('wp_enqueue_scripts', array(&$this, 'enqueueScriptsECss'));
+        add_action('admin_enqueue_scripts', array(&$this, 'adminEnqueueScripts'));
+        
+        
         add_action('widgets_init', array(&$this, 'widgetInit'));
         add_action('wp_footer', array(&$this, 'widgetInject'));
     }
@@ -84,6 +87,20 @@ class dl_tw_ToasterWidget {
 
         wp_enqueue_style('dl_fw_css', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/css/styles.css', array(), null, 'all');
         wp_enqueue_script('dl_fw_css');
+    }
+
+    function adminEnqueueScripts() {
+        wp_register_script('dl_twa_customJS', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/js/custom.js', array('jquery'), NULL);
+        wp_enqueue_script('dl_twa_customJS');
+        wp_register_script('dl_twa_bootstrap', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/js/bootstrap.min.js', array('jquery'), NULL);
+        wp_enqueue_script('dl_twa_bootstrap');
+
+        wp_enqueue_style('dl_twa_css_custom', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/css/custom.css', array(), null, 'all');
+        wp_enqueue_script('dl_twa_css_custom');
+        wp_enqueue_style('dl_twa_css_bootstrap', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/css/bootstrap-iso.css', array(), null, 'all');
+        wp_enqueue_script('dl_twa_css_bootstrap');
+        wp_enqueue_style('dl_twa_css_bootstrap_theme', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/css/bootstrap-theme.css', array(), null, 'all');
+        wp_enqueue_script('dl_twa_css_bootstrap_theme');
     }
 
 }
