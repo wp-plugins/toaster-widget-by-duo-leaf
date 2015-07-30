@@ -2,7 +2,7 @@
 Contributors: DuoLeaf
 Tags: tray, popup, toaster, wigdet area, wigdet, tray, tray area
 Requires at least: 3.0.0
-Tested up to: 4.2.2
+Tested up to: 4.2.3
 Stable tag: trunk
 License: GPLv3
 
@@ -41,6 +41,9 @@ This section describes how to install the plugin and get it working.
 4. To place any widget you want go to 'appearance > widgets'. There will be a area called 'Toaster Widget' where you can just drag and drop your widgets.
 
 == Changelog ==
+
+= 1.0.2 =
+* Bug Fix
 
 = 1.0.1 =
 * Improved the admin area.

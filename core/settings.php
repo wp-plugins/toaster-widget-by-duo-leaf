@@ -10,8 +10,8 @@ class dl_tw_Settings {
     public function __construct() {
 
         $this->title = get_option("dl_tw_title", "Hello!!!");
-        $this->width = get_option("dl_tw_width", 40);
-        $this->titleHeight = get_option("dl_tw_titleHeight", 400);
+        $this->width = get_option("dl_tw_width", 400);
+        $this->titleHeight = get_option("dl_tw_titleHeight", 40);
         $this->contentHeight = get_option("dl_tw_contentHeight", 300);
     }
 

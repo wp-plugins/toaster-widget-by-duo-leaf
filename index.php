@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Toaster Widget by Duo Leaf
  * Plugin URI: http://DuoLeaf.com/toaster-widget-wordpress-plugin/
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Duo Leaf
  * Author URI: http://DuoLeaf.com/
  * Description: 
@@ -105,6 +105,6 @@ class dl_tw_ToasterWidget {
 
 }
 
-require_once(WP_PLUGIN_DIR . '/toaster-widget-by-duoleaf/core/plugin-info.php');
+require_once(WP_PLUGIN_DIR . '/toaster-widget-by-duo-leaf/core/plugin-info.php');
 $dl_tw_pluginInfo = new dl_tw_PluginInfo();
 $dl_tw_toasterWidget = new dl_tw_ToasterWidget($dl_tw_pluginInfo);

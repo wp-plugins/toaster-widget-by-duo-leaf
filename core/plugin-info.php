@@ -13,7 +13,7 @@ class dl_tw_PluginInfo {
      */
     public function __construct() {
 
-        $this->name = "toaster-widget-by-duoleaf";
+        $this->name = "toaster-widget-by-duo-leaf";
         $this->displayName = "Toaster Widget by Duo Leaf";
     }
 
