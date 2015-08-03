@@ -28,3 +28,27 @@
     padding: 5px;
     height: 100%;
 }
+.toaster-arrow-up{
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+   display: block;
+    position: absolute;
+    width: 0;
+    top: 18px;
+    right: 20px;
+}
+.toaster-arrow-down{
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff;
+    display: block;
+    position: absolute;
+    width: 0;
+    top: 18px;
+    right: 20px;
+}

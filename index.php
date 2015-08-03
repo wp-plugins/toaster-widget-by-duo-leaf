@@ -3,10 +3,10 @@
 /**
  * Plugin Name: Toaster Widget by Duo Leaf
  * Plugin URI: http://DuoLeaf.com/toaster-widget-wordpress-plugin/
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Duo Leaf
  * Author URI: http://DuoLeaf.com/
- * Description: 
+ * Description: This plugin creates a widget area on the bottom right corner of your site, with a 'toaster' like effect.
  * License: GPLv3 or later
  */
 class dl_tw_ToasterWidget {
@@ -62,7 +62,7 @@ class dl_tw_ToasterWidget {
         register_sidebar(array(
             'name' => 'Toaster Widget',
             'id' => 'toaster-widget',
-            'before_widget' => '<div class=\'toaster-container\'><div class=\'toaster-title\'>' . $settings->title . '</div><div class=\'toaster-content\'>',
+            'before_widget' => '<div class=\'toaster-container\'><div class=\'toaster-title\'>' . $settings->title . '<span class=\'toaster-arrow-up\'></span></div><div class=\'toaster-content\'>',
             'after_widget' => '</div></div>',
             'before_title' => '',
             'after_title' => '',

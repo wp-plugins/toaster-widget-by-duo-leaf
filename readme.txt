@@ -42,6 +42,9 @@ This section describes how to install the plugin and get it working.
 
 == Changelog ==
 
+= 1.0.3 =
+* Added open and close icons to the form
+
 = 1.0.2 =
 * Bug Fix
 

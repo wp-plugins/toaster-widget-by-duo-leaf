@@ -1,7 +1,7 @@
 var toasterVisible = false;
 
 jQuery(document).ready(function () {
-    
+
     jQuery(".toaster-title").click(function () {
         if (!toasterVisible) {
             openToaster();
@@ -21,16 +21,23 @@ jQuery(document).ready(function () {
     function openToaster() {
         jQuery(".toaster-container").animate({height: toasterHeightOpened}, 300);
         toasterVisible = true;
+        var arrow = jQuery(".toaster-arrow-up");
+        arrow.addClass('toaster-arrow-down');
+        arrow.removeClass('toaster-arrow-up');
+
     }
 
     function closeToaster() {
         jQuery(".toaster-container").animate({height: toasterHeightClosed}, 300);
         toasterVisible = false;
         document.cookie = "toaster-closed";
+        var arrow = jQuery(".toaster-arrow-down");
+        arrow.addClass('toaster-arrow-up');
+        arrow.removeClass('toaster-arrow-down');
     }
 
     function shouldToasterStayClosed() {
         return document.cookie.indexOf("toaster-closed") < 0;
     }
-    
+
 });
