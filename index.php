@@ -3,12 +3,15 @@
 /**
  * Plugin Name: Toaster Widget by Duo Leaf
  * Plugin URI: http://DuoLeaf.com/toaster-widget-wordpress-plugin/
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: Duo Leaf
  * Author URI: http://DuoLeaf.com/
  * Description: This plugin creates a widget area on the bottom right corner of your site, with a 'toaster' like effect.
  * License: GPLv3 or later
  */
+require_once(WP_PLUGIN_DIR . '/toaster-widget-by-duo-leaf/duo-leaf/duoleaf.php');
+
+
 class dl_tw_ToasterWidget {
 
     /** @var dl_tw_PluginInfo */
@@ -27,14 +30,15 @@ class dl_tw_ToasterWidget {
         add_action('admin_menu', array(&$this, 'adminPanelsAndMetaBoxes'));
         add_action('wp_enqueue_scripts', array(&$this, 'enqueueScriptsECss'));
         add_action('admin_enqueue_scripts', array(&$this, 'adminEnqueueScripts'));
-        
-        
+
+
         add_action('widgets_init', array(&$this, 'widgetInit'));
         add_action('wp_footer', array(&$this, 'widgetInject'));
     }
 
     function adminPanelsAndMetaBoxes() {
-        add_submenu_page('options-general.php', $this->pluginInfo->displayName, $this->pluginInfo->displayName, 'manage_options', $this->pluginInfo->name, array(&$this, 'adminPanel'));
+
+        add_submenu_page('duo-leaf', $this->pluginInfo->smallDisplayName, $this->pluginInfo->smallDisplayName, 'manage_options', $this->pluginInfo->name, array(&$this, 'adminPanel'));
     }
 
     function adminPanel() {

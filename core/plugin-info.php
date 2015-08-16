@@ -6,6 +6,7 @@ class dl_tw_PluginInfo {
      * Properties
      */
     public $name;
+    public $smallDisplayName;
     public $displayName;
 
     /**
@@ -14,7 +15,8 @@ class dl_tw_PluginInfo {
     public function __construct() {
 
         $this->name = "toaster-widget-by-duo-leaf";
-        $this->displayName = "Toaster Widget by Duo Leaf";
+        $this->smallDisplayName = "Toaster Widget";
+        $this->displayName = $this->smallDisplayName . " by Duo Leaf";
     }
 
 }

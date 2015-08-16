@@ -10,7 +10,7 @@
                 <div class="panel-body">
 
 
-                    <form action="options-general.php?page=<?php echo $this->pluginInfo->name ?>&action=resource-form" method="post">
+                    <form action="admin.php?page=<?php echo $this->pluginInfo->name ?>&action=resource-form" method="post">
                         <?php wp_nonce_field($this->pluginInfo->name, $this->view->onceName); ?>
                         <?php
                         if (isset($this->message)) {
